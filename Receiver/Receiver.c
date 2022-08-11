@@ -73,10 +73,10 @@ int stateOfChargeMovingaverage;
     
     GetDataFromSender(&temperatureReadings[0],&stateOfChargeReadings[0]);
     
-    GetMaxValue(&temperatureMaxValue,&temperatureMinValue,&temperatureReadings[0]);
-    GetMinValue(&temperatureMaxValue,&temperatureMinValue,&temperatureReadings[0]);
-    GetMaxValue(&stateOfChargeMaxValue,&stateOfChargeMinValue,&stateOfChargeReadings[0]);
-    GetMinValue(&stateOfChargeMaxValue,&stateOfChargeMinValue,&stateOfChargeReadings[0]);
+    GetMaxValue(&temperatureMaxValue,&temperatureReadings[0]);
+    GetMinValue(&temperatureMinValue,&temperatureReadings[0]);
+    GetMaxValue(&stateOfChargeMaxValue,&stateOfChargeReadings[0]);
+    GetMinValue(&stateOfChargeMinValue,&stateOfChargeReadings[0]);
     
     ComputeMovingAverage(&temperatureReadings[0],&temperatureMovingaverage);
     ComputeMovingAverage(&temperatureReadings[0],&stateOfChargeMovingaverage);
