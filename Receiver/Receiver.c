@@ -15,10 +15,25 @@ void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
   } 
 }
 
-void GetMaxMinValue(int* maxValue, int* minValue, int *sensorData )
+void GetMaxValue(int* maxValue, int *sensorData )
 {
     
-    *maxValue=*minValue=sensorData[0];
+    *maxValue=sensorData[0];
+    
+    for(int range = 0; range < 50; range++)
+    {
+         if(*maxValue < sensorData[range])
+         {
+            *maxValue =  sensorData[range];
+         }
+        *maxValue=sensorData[range]; 		         
+    }
+}
+
+void GetMinValue( int* minValue, int *sensorData )
+{
+    
+    *minValue=sensorData[0];
     
     for(int range = 0; range < 50; range++)
     {
@@ -26,15 +41,10 @@ void GetMaxMinValue(int* maxValue, int* minValue, int *sensorData )
          {
             *minValue =  sensorData[range];
          }
-		 *minValue=sensorData[range];
-		 if(*maxValue < sensorData[range])
-         {
-            *maxValue =  sensorData[range];
-         }
-		  *maxValue=sensorData[range]; 
-		         
+         *minValue=sensorData[range];		         
     }
 }
+
 
 void ComputeMovingAverage(int* sensorData, int*average)
 {
