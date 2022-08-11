@@ -2,3 +2,8 @@
 
 #include "test/catch.hpp"
 #include "Receiver.c"
+
+TEST_CASE("call reeciever")
+{
+  void ReceiveSensorData();
+}
