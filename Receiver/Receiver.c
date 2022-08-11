@@ -44,10 +44,7 @@ void ComputeMovingAverage(int* sensorData, int*average)
     *average  = sum/5;
 }
 
-void PrintOnConsole(int temperatureMaxValue,int temperatureMinValue, 
-    int stateOfChargeMaxValue,int stateOfChargeMinValue ,
-    int temperatureMovingaverage ,
-int stateOfChargeMovingaverage)
+void PrintOnConsole(int temperatureMaxValue,int temperatureMinValue, int stateOfChargeMaxValue,int stateOfChargeMinValue ,int temperatureMovingaverage ,int stateOfChargeMovingaverage)
 {
     printf("Temp Sensor MaxValue:%d,Temp Sensor MinValue:%d,Temp Sensor Moving Average:%d\n SOC MaxValue:%d,SOC MinValue:%d,SOC Moving Average:%d\n", temperatureMaxValue, temperatureMinValue,temperatureMovingaverage,stateOfChargeMaxValue,stateOfChargeMinValue,stateOfChargeMovingaverage);
 }
@@ -72,10 +69,7 @@ int stateOfChargeMovingaverage;
     ComputeMovingAverage(&temperatureReadings[0],&temperatureMovingaverage);
     ComputeMovingAverage(&temperatureReadings[0],&stateOfChargeMovingaverage);
     
-    PrintOnConsole(int temperatureMaxValue,int temperatureMinValue, 
-    int stateOfChargeMaxValue,int stateOfChargeMinValue ,
-    int temperatureMovingaverage ,
-int stateOfChargeMovingaverage);
+    PrintOnConsole(int temperatureMaxValue,int temperatureMinValue, int stateOfChargeMaxValue,int stateOfChargeMinValue ,int temperatureMovingaverage ,int stateOfChargeMovingaverage);
 
     
 }
