@@ -1,5 +1,5 @@
 #include "Receiver.c"
 
-TEST_CASE(" call receiver "){
+TEST_CASE("call receiver"){
 void ReceiveSensorData();
 }
