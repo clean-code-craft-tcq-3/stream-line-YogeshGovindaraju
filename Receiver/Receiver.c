@@ -24,13 +24,12 @@ void GetMaxValue(int* maxValue, int *sensorData )
     
     *maxValue=sensorData[0];
     
-    for(int range = 0; range < 48; range++)
+    for(int range = 0; range < 50; range++)
     {
          if(*maxValue < sensorData[range])
          {
             *maxValue =  sensorData[range];
-         }
-        *maxValue=sensorData[range]; 		         
+         }		         
     }
 }
 
@@ -39,13 +38,12 @@ void GetMinValue( int* minValue, int *sensorData )
     
     *minValue=sensorData[0];
     
-    for(int range = 0; range < 48; range++)
+    for(int range = 0; range < 50; range++)
     {
          if(*minValue > sensorData[range])
          {
             *minValue =  sensorData[range];
-         }
-         *minValue=sensorData[range];		         
+         }		         
     }
 }
 
@@ -54,11 +52,11 @@ void ComputeMovingAverage(int* sensorData, int*average)
 {
     *average = 0;
     int sum = 0;
-    for(int range = 45; range < 48 ; range++)
+    for(int range = 45; range < 50 ; range++)
     {
         sum += sensorData[range];
     }
-    *average  = sum/3;
+    *average  = sum/5;
 }
 
 
