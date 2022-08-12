@@ -57,7 +57,7 @@ void ComputeMovingAverage(int* sensorData, int*average)
 
 
 
-void ReceiveSensorData()
+bool ReceiveSensorData()
 {
     
 int temperatureReadings[50];
@@ -81,5 +81,5 @@ int stateOfChargeMovingaverage;
     
     PrintOutput(temperatureMaxValue, temperatureMinValue, stateOfChargeMaxValue, stateOfChargeMinValue , temperatureMovingaverage , stateOfChargeMovingaverage);
 
-    
+    return 0;
 }
