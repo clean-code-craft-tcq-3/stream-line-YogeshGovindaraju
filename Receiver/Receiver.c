@@ -7,7 +7,7 @@ void PrintOutput(int temperatureMaxValue,int temperatureMinValue, int stateOfCha
 
 void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
 {
-   for(int range = 0; range < 50; range++)
+   for(int range = 0; range < 52; range++)
   {
     scanf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);
   } 
@@ -18,7 +18,7 @@ void GetMaxValue(int* maxValue, int *sensorData )
     
     *maxValue=sensorData[0];
     
-    for(int range = 0; range < 50; range++)
+    for(int range = 2; range < 52; range++)
     {
          if(*maxValue < sensorData[range])
          {
@@ -33,7 +33,7 @@ void GetMinValue( int* minValue, int *sensorData )
     
     *minValue=sensorData[0];
     
-    for(int range = 0; range < 50; range++)
+    for(int range = 2; range < 52; range++)
     {
          if(*minValue > sensorData[range])
          {
@@ -48,7 +48,7 @@ void ComputeMovingAverage(int* sensorData, int*average)
 {
     *average = 0;
     int sum = 0;
-    for(int range = 45; range < 50 ; range++)
+    for(int range = 47; range < 52 ; range++)
     {
         sum += sensorData[range];
     }
@@ -60,8 +60,8 @@ void ComputeMovingAverage(int* sensorData, int*average)
 void ReceiveSensorData()
 {
     
-int temperatureReadings[50];
-int stateOfChargeReadings[50];
+int temperatureReadings[52];
+int stateOfChargeReadings[52];
 int temperatureMaxValue ;
 int temperatureMinValue;
 int stateOfChargeMaxValue ;
