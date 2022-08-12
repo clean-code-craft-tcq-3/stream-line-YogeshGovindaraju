@@ -7,11 +7,11 @@ void PrintOutput(int temperatureMaxValue,int temperatureMinValue, int stateOfCha
 
 void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
 {
-    int i = 0;
-   for(int range = 2; range < 50; range++)
+    
+   for(int range = 0; range < 50; range++)
   {
     scanf("%d, %d\n",&temperatureReadings[i], &stateOfChargeReadings[i]);
-       i++;
+     printf("%d, %d\n",&temperatureReadings[i], &stateOfChargeReadings[i]);  
   } 
 }
 
