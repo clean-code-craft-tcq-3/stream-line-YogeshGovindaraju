@@ -71,7 +71,7 @@ int stateOfChargeMinValue;
 int temperatureMovingaverage;
 int stateOfChargeMovingaverage;
     
-    GetDataFromSender(&temperatureReadings[0],&stateOfChargeReadings[0]);
+    GetDataFromSender(temperatureReadings,stateOfChargeReadings);
     
     GetMaxValue(&temperatureMaxValue,&temperatureReadings[0]);
     GetMinValue(&temperatureMinValue,&temperatureReadings[0]);
