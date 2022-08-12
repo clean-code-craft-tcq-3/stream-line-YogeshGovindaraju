@@ -81,5 +81,5 @@ int stateOfChargeMovingaverage;
     
     PrintOutput(temperatureMaxValue, temperatureMinValue, stateOfChargeMaxValue, stateOfChargeMinValue , temperatureMovingaverage , stateOfChargeMovingaverage);
 
-    return 0;
+   
 }
