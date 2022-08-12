@@ -4,5 +4,5 @@
 #include "Receiver.h"
 
 TEST_CASE("call receiver"){
-void ReceiveSensorData();
+  REQUIRE(ReceiveSensorData() == 0);
 }
