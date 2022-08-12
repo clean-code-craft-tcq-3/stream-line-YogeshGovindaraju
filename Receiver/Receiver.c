@@ -15,7 +15,7 @@ void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
   {
   
     scanf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);
-     printf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);  
+     printf("%d, %d\n",temperatureReadings[range], stateOfChargeReadings[range]);  
   } 
 }
 
