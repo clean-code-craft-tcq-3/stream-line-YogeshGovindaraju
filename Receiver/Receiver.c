@@ -7,11 +7,15 @@ void PrintOutput(int temperatureMaxValue,int temperatureMinValue, int stateOfCha
 
 void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
 {
+    char sensor1[50];
+    char sensor2[50];
+    scanf("%s, %s\n",&sensor1, &sensor2);
     
    for(int range = 0; range < 50; range++)
   {
-    scanf("%d, %d\n",&temperatureReadings[range ], &stateOfChargeReadings[range ]);
-     printf("%d, %d\n",&temperatureReadings[range ], &stateOfChargeReadings[range ]);  
+  
+    scanf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);
+     printf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);  
   } 
 }
 
