@@ -7,4 +7,4 @@ void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings);
 void GetMaxValue(int* maxValue, int *sensorData );
 void GetMinValue( int* minValue, int *sensorData );
 void ComputeMovingAverage(int* sensorData, int*average);
-bool ReceiveSensorData();
+void ReceiveSensorData();
