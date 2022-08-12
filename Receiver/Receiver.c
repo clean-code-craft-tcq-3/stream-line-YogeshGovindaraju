@@ -15,7 +15,6 @@ void GetDataFromSender(int* temperatureReadings,int*stateOfChargeReadings)
   {
   
     scanf("%d, %d\n",&temperatureReadings[range], &stateOfChargeReadings[range]);
-     printf("%d, %d\n",temperatureReadings[range], stateOfChargeReadings[range]);  
   } 
 }
 
@@ -81,7 +80,7 @@ int stateOfChargeMovingaverage;
     GetMinValue(&stateOfChargeMinValue,&stateOfChargeReadings[0]);
     
     ComputeMovingAverage(&temperatureReadings[0],&temperatureMovingaverage);
-    ComputeMovingAverage(&temperatureReadings[0],&stateOfChargeMovingaverage);
+    ComputeMovingAverage(&stateOfChargeReadings[0],&stateOfChargeMovingaverage);
     
     PrintOutput(temperatureMaxValue, temperatureMinValue, stateOfChargeMaxValue, stateOfChargeMinValue , temperatureMovingaverage , stateOfChargeMovingaverage);
 
